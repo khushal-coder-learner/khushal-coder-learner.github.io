@@ -42,8 +42,8 @@ h3::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -6px;
-  height: 3px;
+  bottom: -0.375rem; /* 6px / 16px */
+  height: 0.1875rem; /* 3px / 16px */
   width: 0;
   background: linear-gradient(90deg, #00ffff, #ff00ff);
   transition: width 0.4s ease;
@@ -64,7 +64,7 @@ h3:hover::after {
 
 p {
   text-align: center;
-  font-size: 18px;
+  font-size: 1.125rem; /* 18px / 16px */
 }
 
 /* PROJECTS GRID */
@@ -72,30 +72,30 @@ p {
   display: flex;
   gap: 20px;
   justify-content: center;
-  flex-wrap: wrap;
-  padding: 20px;
+  flex-wrap: wrap;  
+  padding: 1.25rem; /* 20px / 16px */
 }
 
 /* SUMMARY CARD */
 #summary {
-  max-width: 900px;
-  margin: 40px auto;
+  max-width: 56.25rem; /* 900px / 16px */
+  margin: 2.5rem auto; /* 40px / 16px */
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(0, 255, 255, 0.2);
-  border-radius: 16px;
+  border-radius: 1rem; /* 16px / 16px */
   backdrop-filter: blur(12px);
   color: #fdfdfd;
-  padding: 30px;
+  padding: 1.875rem; /* 30px / 16px */
   font-size: 1.1rem;
   line-height: 1.7;
   box-shadow: 0 0 25px rgba(0, 255, 255, 0.1);
   position: relative;
-  overflow: visible; /* FIX */
+  overflow: visible;
 }
 
 #summary:hover {
   box-shadow: 0 0 40px rgba(0,255,255,0.3);
-  transform: translateY(-3px);
+  transform: translateY(-0.1875rem); /* 3px / 16px */
   transition: all 0.4s ease;
 }
 
@@ -103,20 +103,20 @@ p {
 #overview {
   display: flex;
   gap: 20px;
-  justify-content: center;
+  justify-content: center;  
   flex-wrap: wrap;
-  padding: 20px;
+  padding: 1.25rem; /* 20px / 16px */
 }
 
 /* ---CARDS SECTION--- */
 .project {
   background: rgba(0, 0, 0, 1);
-  border-radius: 12px;
+  border-radius: 0.75rem; /* 12px / 16px */
   box-shadow:
     0 4px 8px rgba(0, 0, 0, 0.1),
     0 8px 24px rgba(0, 0, 0, 0.08);
-  padding: 30px;
-  width: 250px;
+  padding: 1.875rem; /* 30px / 16px */
+  width: 15.625rem; /* 250px / 16px */
   text-align: center;
   font-size: 1.1rem;
   font-weight: 500;
@@ -126,7 +126,7 @@ p {
 }
 
 .project:hover {
-  transform: translateY(-6px) scale(1.03);
+  transform: translateY(-0.375rem) scale(1.03); /* 6px / 16px */
   border-color: #0ff;
   box-shadow:
     0 0 10px #0ff,
@@ -141,12 +141,13 @@ p {
   background-size: 300% 300%;
   border: 3px solid transparent;
   color: #f7feff;
-  border-radius: 16px;
+  border-radius: 1rem; /* 16px / 16px */
   box-shadow: 0 4px 10px rgba(72, 192, 222, 0.1);
-  padding: 20px;
-  width: 360px;
+  padding: 1.25rem; /* 20px / 16px */  
   font-size: 1.1rem;
   font-weight: 500;
+  flex: 1 1 20rem; /* Allow cards to grow and shrink, with a base size of 320px */
+  max-width: 22.5rem; /* Set a max-width to prevent them from becoming too large */
   transition: transform 0.2s ease;
   animation: borderFlow 8s linear infinite;
   overflow: visible; /* FIX for tooltip */
@@ -154,7 +155,7 @@ p {
 }
 
 .experience:hover {
-  transform: translateY(-5px) scale(1.03);
+  transform: translateY(-0.3125rem) scale(1.03); /* 5px / 16px */
 }
 
 @keyframes borderFlow {
@@ -188,12 +189,12 @@ p {
   position: relative;
   background: rgba(0, 0, 0, 0.85);
   border: 1px solid rgba(0, 255, 255, 0.3);
-  border-radius: 18px;
+  border-radius: 1.125rem; /* 18px / 16px */
   box-shadow: 0 0 40px rgba(0, 255, 255, 0.3);
   color: #e6ffff;
-  max-width: 600px;
+  max-width: 37.5rem; /* 600px / 16px */
   width: 90%;
-  padding: 30px;
+  padding: 1.875rem; /* 30px / 16px */
   text-align: center;
   transform: scale(0.85);
   transition: transform 0.3s ease;
@@ -206,9 +207,9 @@ p {
 /* CLOSE BUTTON */
 #close-popup {
   position: absolute;
-  top: 12px;
-  right: 18px;
-  font-size: 26px;
+  top: 0.75rem; /* 12px / 16px */
+  right: 1.125rem; /* 18px / 16px */
+  font-size: 1.625rem; /* 26px / 16px */
   color: #0ff;
   cursor: pointer;
   transition: color 0.2s;
@@ -221,12 +222,12 @@ p {
 /* POPUP CONTENT */
 #popup-content h3 {
   color: #0ff;
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem; /* 10px / 16px */
   font-size: 1.5rem;
 }
 
 #popup-content p {
-  margin: 15px 0;
+  margin: 0.9375rem 0; /* 15px / 16px */
   line-height: 1.6;
   font-size: 1.1rem;
 }
@@ -235,8 +236,8 @@ p {
   display: inline-block;
   color: #0ff;
   border: 1px solid #0ff;
-  padding: 8px 12px;
-  border-radius: 10px;
+  padding: 0.5rem 0.75rem; /* 8px 12px */
+  border-radius: 0.625rem; /* 10px / 16px */
   text-decoration: none;
   transition: 0.2s;
 }
@@ -250,26 +251,26 @@ p {
   color: #bdeaff;
   font-size: 1.05rem;
   line-height: 1.6;
-  margin: 10px 0 15px;
+  margin: 0.625rem 0 0.9375rem; /* 10px 15px */
 }
 
 .certificate-pdf {
   width: 100%;
-  max-width: 800px;
-  height: 520px;
+  max-width: 50rem; /* 800px / 16px */
+  height: 32.5rem; /* 520px / 16px */
   border: none;
-  border-radius: 10px;
-  margin-top: 15px;
+  border-radius: 0.625rem; /* 10px / 16px */
+  margin-top: 0.9375rem; /* 15px / 16px */
   box-shadow: 0 0 25px rgba(0,255,255,0.25);
 }
 
 .verify-link {
   display: inline-block;
-  margin-top: 20px;
+  margin-top: 1.25rem; /* 20px / 16px */
   color: #0ff;
   border: 1px solid #0ff;
-  padding: 8px 14px;
-  border-radius: 8px;
+  padding: 0.5rem 0.875rem; /* 8px 14px */
+  border-radius: 0.5rem; /* 8px / 16px */
   text-decoration: none;
   font-weight: 600;
   transition: all 0.2s;
@@ -283,9 +284,9 @@ p {
 /* CERTIFICATE LIST ITEM */
 #courses li {
   list-style-type: none;
-  padding: 10px 15px;
-  margin: 8px 0;
-  border-radius: 10px;
+  padding: 0.625rem 0.9375rem; /* 10px 15px */
+  margin: 0.5rem 0; /* 8px / 16px */
+  border-radius: 0.625rem; /* 10px / 16px */
   background: rgba(255, 255, 255, 0.03);
   transition: all 0.25s ease;
   cursor: pointer;
@@ -296,7 +297,7 @@ p {
 #courses li:hover {
   background: rgba(0, 255, 255, 0.08);
   box-shadow: 0 0 12px rgba(0, 255, 255, 0.25);
-  transform: translateY(-2px);
+  transform: translateY(-0.125rem); /* 2px / 16px */
   color: #0ff;
 }
 
@@ -304,7 +305,7 @@ p {
   content: "↗";
   opacity: 0;
   position: absolute;
-  right: 15px;
+  right: 0.9375rem; /* 15px / 16px */
   top: 50%;
   transform: translateY(-50%);
   color: #0ff;
@@ -323,8 +324,8 @@ p {
 }
 
 .tech-category {
-  margin-bottom: 22px;
-  padding-bottom: 10px;
+  margin-bottom: 1.375rem; /* 22px / 16px */
+  padding-bottom: 0.625rem; /* 10px / 16px */
   border-bottom: 1px solid rgba(0,255,255,0.1);
 }
 
@@ -334,7 +335,7 @@ p {
 
 .tech-category h4 {
   color: #ffffff;
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem; /* 10px / 16px */
   font-size: 1.1rem;
   text-shadow: 0 0 8px rgba(255, 0, 255, 0.3);
 }
@@ -342,10 +343,10 @@ p {
 /* INDIVIDUAL TECH ITEMS */
 .tech-item {
   display: inline-block;
-  margin: 5px 6px;
-  padding: 6px 10px;
+  margin: 0.3125rem 0.375rem; /* 5px 6px */
+  padding: 0.375rem 0.625rem; /* 6px 10px */
   border: 1px solid rgba(0,255,255,0.25);
-  border-radius: 8px;
+  border-radius: 0.5rem; /* 8px / 16px */
   background: rgba(255,255,255,0.03);
   color: #bdeaff;
   font-size: 0.95rem;
@@ -361,7 +362,7 @@ p {
   border-color: rgba(0,255,255,0.6);
   color: #0ff;
   box-shadow: 0 0 12px rgba(0,255,255,0.25);
-  transform: translateY(-2px);
+  transform: translateY(-0.125rem); /* 2px / 16px */
 }
 
 /* TOOLTIP */
@@ -369,10 +370,10 @@ p {
   position: fixed;
   transform: translateX(-50%);
   background: rgba(15, 20, 30, 0.97);
-  border: 1px solid rgba(0,255,255,0.35);
-  border-radius: 12px;
-  padding: 12px 14px;
-  width: 240px;
+  border: 1px solid rgba(0,255,255,0.35);  
+  border-radius: 0.75rem; /* 12px / 16px */
+  padding: 0.75rem 0.875rem; /* 12px 14px */
+  width: 15rem; /* 240px / 16px */
   pointer-events: none;
 
   box-shadow:
@@ -391,22 +392,22 @@ p {
 
 .tooltip-text {
   color: #c8f6ff;
-  margin-bottom: 8px;
+  margin-bottom: 0.5rem; /* 8px / 16px */
   font-size: 0.90rem;
   line-height: 1.34;
 }
 
 .tooltip-level {
   color: #0ff;
-  margin-bottom: 8px;
+  margin-bottom: 0.5rem; /* 8px / 16px */
   font-size: 0.90rem;
   font-weight: 600;
 }
 
 /* Progress Bar */
 .tooltip-bar {
-  width: 100%;
-  height: 7px;
+  width: 100%;  
+  height: 0.4375rem; /* 7px / 16px */
   background: rgba(255,255,255,0.08);
   border: 1px solid rgba(0,255,255,0.35);
   border-radius: 4px;
@@ -424,7 +425,7 @@ footer {
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
   border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 20px;
+  padding: 1.25rem; /* 20px / 16px */
   text-align: center;
   color: #aaf0f0;
   box-shadow: 0 -4px 20px rgba(0, 255, 255, 0.1);
@@ -437,9 +438,9 @@ footer {
 }
 
 .social-icon {
-  width: 35px;
-  height: 35px;
-  margin: 0 10px;
+  width: 2.1875rem; /* 35px / 16px */
+  height: 2.1875rem; /* 35px / 16px */
+  margin: 0 0.625rem; /* 10px / 16px */
   vertical-align: middle;
   opacity: 0.85;
   transition: opacity 0.2s ease;
