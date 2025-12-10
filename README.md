@@ -1,4 +1,3 @@
-...existing code...
 # Portfolio Project
 
 A personal portfolio static website showcasing projects, skills and courses. Designed with a modern, responsive layout and subtle animated effects.
